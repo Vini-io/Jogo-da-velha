@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+:root {
+    --bg-info: #fff;
+    --color-text: #fff;
+    --shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    --radius: 30px;
+    --font: 'Montserrat', sans-serif;
+}
+
+
+
+
+/* START style menu game */
+
+.body-menu_game {
+    position: absolute;
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom left, #06390b83, #d333e286);
+}
+
+.group-menu {
+    width: 40rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.group-menu>h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-text);
+    font-size: 3rem;
+}
+
+
+.options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.btn {
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 7px;
+    padding: 20px;
+    width: 65%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--color-text);
+    border: none;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.btn:hover {
+    transition: .2s;
+    color: rgba(0, 0, 0, 0.501);
+    letter-spacing: 10px;
+}
+
+/* END style menu game */
+
+
+
+
+.body-game {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom left, #000000, #33ff0066);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pointing {
+    width: 27rem;
+    height: 10rem;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: var(--font);
+}
+
+.pointing>h2 {
+    font-weight: 400;
+}
+
+.players {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.players>div {
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.game-board {
+    width: 27rem;
+    height: 27rem;
+    background: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+.square {
+    width: 9rem;
+    height: 9rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.x,
+.o {
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    font-weight: 100;
+    translate: 0 -10px;
+}
+
+.x {
+    color:#FF0000;
+}
+.o{
+    color: #33FF00;
+}
+
+
+/* impate do jogo */
+
+.body-tieGame{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.tieGame{
+    position: absolute;
+    top: 25vh;
+    width: 27rem;
+    height: 17rem;
+    border-radius:var(--radius) ;
+    background-color: var(--bg-info);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.tieGame>span{
+    font-family: var(--font);
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.tieGame>button{
+    background: yellow;
+    padding: 10px 20px;
+    border: none;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+
+/* jogador ganhador */
+
+.body-winnerPlayer{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.winner{
+    position: absolute;
+    top: 25vh;
+    width: 27rem;
+    height: 17rem;
+    border-radius:var(--radius) ;
+    background-color: var(--bg-info);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.winner>h2{
+    font-family: var(--font);
+    letter-spacing: 2px;
+}
+.winner>span{
+    font-family: var(--font);
+}
+
+.winner>button{
+    background: yellow;
+    padding: 10px 20px;
+    border: none;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+/* btns */
+
+
+.btns{
+    user-select: none;
+    margin-top: 20px;
+    width: 26rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btns>button{
+    border: none;
+    padding: 10px 20px;
+    font-family: var(--font);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+.btns>button:hover{
+    background-color: rgb(171, 171, 171);
+}
+
+
+
+/* loader */
+
+.loader{
+    user-select: none;
+    position: absolute;
+    top: -100vh;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.5s;
+}
+.show-loader{
+top: 0;
+}
+
+
+.loader>span{
+    color: var(--color-text);
+    margin: 50px;
+    font-size: 10rem;
+    font-family: var(--font);
+    font-weight: 100;
+    text-shadow: 0 0 20px #fff;
+    animation: load 2s infinite alternate-reverse linear;
+}
+
+@keyframes load {
+    0%{
+        text-shadow: 0 0 20px rgb(0, 4, 255);
+
+    }
+    25%{
+        text-shadow: 0 0 20px rgb(0, 255, 51);
+
+    }
+    50%{
+        text-shadow: 0 0 20px rgb(53, 166, 226);
+
+    }75%{
+        text-shadow: 0 0 20px rgb(225, 0, 255);
+
+    }
+    100%{
+        text-shadow: 0 0 20px rgb(255, 0, 0);
+        transform: rotateY(360deg);
+
+    }
+}

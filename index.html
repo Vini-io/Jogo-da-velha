@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Jogo da velha</title>
+</head>
+
+<body>
+
+    <section class="loader">
+        <span>x</span>
+        <span>o</span>
+    </section>
+
+    <section class="body-menu_game">
+        <div class="group-menu">
+            <h1>JOGO DA VELHA</h1>
+            <div class="options">
+                <button class="btn btn-play">Jogar</button>
+                <button class="btn">Opções</button>
+                <button class="btn close">Sair</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="body-game">
+
+        <div class="body-tieGame">
+            <div class="tieGame">
+                <span>Empate!!</span>
+                <button class="tieStartGame">Jogar novamente</button>
+            </div>
+        </div>
+
+        <div class="body-winnerPlayer">
+            <div class="winner">
+                <h2>Ganhador da rodada!!</h2>
+                <span class="winnerPlayer"></span>
+                <button class="winnerStartGame">Jogar novamente</button>
+
+            </div>
+        </div>
+
+
+        <div class="pointing">
+            <h2>PONTUAÇÃO</h2>
+            <div class="players">
+                <div class="player-1">
+                    <span>Player: 1</span>
+                    <span class="pointP1">0</span>
+                </div>
+                <div class="player-2">
+                    <span>Player: 2</span>
+                    <span class="pointP2">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board">
+            <div id="0" class="square"></div>
+            <div id="1" class="square"></div>
+            <div id="2" class="square"></div>
+            <div id="3" class="square"></div>
+            <div id="4" class="square"></div>
+            <div id="5" class="square"></div>
+            <div id="6" class="square"></div>
+            <div id="7" class="square"></div>
+            <div id="8" class="square"></div>
+        </div>
+
+        <div class="btns">
+            <button class="back">Voltar</button>
+            <button class="reset">Resetar</button>
+        </div>
+
+
+    </section>
+
+
+
+
+    <script src="./scripts/game.js"> </script>
+    <script src="./scripts/inter.js"> </script>
+
+</body>
+
+</html>
