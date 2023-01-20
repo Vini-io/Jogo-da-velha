@@ -28,7 +28,7 @@ body {
 
 .body-menu_game {
     position: absolute;
-    display: inherit;
+    display: none;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom left, #06390b83, #d333e286);
@@ -88,7 +88,7 @@ body {
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(to bottom left, #000000, #33ff0066);
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -153,16 +153,17 @@ body {
 }
 
 .x {
-    color:#FF0000;
+    color: #FF0000;
 }
-.o{
+
+.o {
     color: #33FF00;
 }
 
 
 /* impate do jogo */
 
-.body-tieGame{
+.body-tieGame {
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -173,26 +174,27 @@ body {
     z-index: 10;
 }
 
-.tieGame{
+.tieGame {
     position: absolute;
     top: 25vh;
     width: 27rem;
     height: 17rem;
-    border-radius:var(--radius) ;
+    border-radius: var(--radius);
     background-color: var(--bg-info);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-.tieGame>span{
+
+.tieGame>span {
     font-family: var(--font);
     letter-spacing: 4px;
     font-weight: 600;
     font-size: 2rem;
 }
 
-.tieGame>button{
+.tieGame>button {
     background: yellow;
     padding: 10px 20px;
     border: none;
@@ -206,7 +208,7 @@ body {
 
 /* jogador ganhador */
 
-.body-winnerPlayer{
+.body-winnerPlayer {
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -217,12 +219,12 @@ body {
     z-index: 10;
 }
 
-.winner{
+.winner {
     position: absolute;
     top: 25vh;
     width: 27rem;
     height: 17rem;
-    border-radius:var(--radius) ;
+    border-radius: var(--radius);
     background-color: var(--bg-info);
     display: flex;
     flex-direction: column;
@@ -230,15 +232,16 @@ body {
     justify-content: space-evenly;
 }
 
-.winner>h2{
+.winner>h2 {
     font-family: var(--font);
     letter-spacing: 2px;
 }
-.winner>span{
+
+.winner>span {
     font-family: var(--font);
 }
 
-.winner>button{
+.winner>button {
     background: yellow;
     padding: 10px 20px;
     border: none;
@@ -252,7 +255,7 @@ body {
 /* btns */
 
 
-.btns{
+.btns {
     user-select: none;
     margin-top: 20px;
     width: 26rem;
@@ -261,7 +264,8 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-.btns>button{
+
+.btns>button {
     border: none;
     padding: 10px 20px;
     font-family: var(--font);
@@ -271,7 +275,8 @@ body {
     border-radius: var(--radius);
     cursor: pointer;
 }
-.btns>button:hover{
+
+.btns>button:hover {
     background-color: rgb(171, 171, 171);
 }
 
@@ -279,7 +284,7 @@ body {
 
 /* loader */
 
-.loader{
+.loader {
     user-select: none;
     position: absolute;
     top: -100vh;
@@ -292,12 +297,13 @@ body {
     justify-content: center;
     transition: 1.5s;
 }
-.show-loader{
-top: 0;
+
+.show-loader {
+    top: 0;
 }
 
 
-.loader>span{
+.loader>span {
     color: var(--color-text);
     margin: 50px;
     font-size: 10rem;
@@ -308,24 +314,95 @@ top: 0;
 }
 
 @keyframes load {
-    0%{
+    0% {
         text-shadow: 0 0 20px rgb(0, 4, 255);
 
     }
-    25%{
+
+    25% {
         text-shadow: 0 0 20px rgb(0, 255, 51);
 
     }
-    50%{
+
+    50% {
         text-shadow: 0 0 20px rgb(53, 166, 226);
 
-    }75%{
+    }
+
+    75% {
         text-shadow: 0 0 20px rgb(225, 0, 255);
 
     }
-    100%{
+
+    100% {
         text-shadow: 0 0 20px rgb(255, 0, 0);
         transform: rotateY(360deg);
 
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .group-menu {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+
+    .loader>span {
+        font-size: 5rem;
+    }
+
+    .pointing {
+        width: 90%;
+        height: 10rem;
+
+    }
+
+    .game-board {
+        width: 90%;
+        height: 6rem;
+    }
+
+    .square {
+        width: 100%;
+        height: 6rem;
+    }
+
+    .btns {
+        position: absolute;
+        bottom: 15px;
+        user-select: none;
+        margin-top: 0px;
+        width: 95%;
+        height: 5rem;
+    }
+
+    .winner {
+        position: absolute;
+        top: 25vh;
+        width: 95%;
+        height: 17rem;
+    }
+
+    .winner>h2 {
+        font-size: 1.1rem;
+    }
+
+    .tieGame {
+        width: 95%;
+
+    }
+}
+
+@media only screen and (max-width: 470px) {
+
+    .group-menu>h1 {
+        font-size: 1.7rem;
+    }
+
+    .btn {
+        width: 55%;
+        font-size: 1.2rem;
     }
 }
