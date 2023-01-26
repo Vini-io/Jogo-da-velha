@@ -95,6 +95,7 @@ document.querySelector(".winnerStartGame").addEventListener("click", () => {
 
 document.querySelector(".btn-play").addEventListener("click", () => {
     document.querySelector(".loader").classList.add("show-loader")
+    document.querySelector(".body-options").style.display = "none"
 
 
     setTimeout(() => {
