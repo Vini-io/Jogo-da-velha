@@ -22,11 +22,22 @@
             <h1>JOGO DA VELHA</h1>
             <div class="options">
                 <button class="btn btn-play">Jogar</button>
-                <button class="btn">Opções</button>
+                <button class="btn btn-op">Opções</button>
                 <button class="btn close">Sair</button>
             </div>
         </div>
     </section>
+
+    <div class="body-options">
+        <div class="op-player">
+            <input onchange="modPlayer1()" id="getPlayer1" type="text" placeholder="Nome player X" value="Player X">
+        </div>
+        <div class="op-player">
+            <input onchange="modPlayer2()" id="getPlayer2" type="text" placeholder="Nome player O" value="Player O">
+            
+        </div>
+        <button class="op-close">Fechar</button>
+    </div>
 
 
     <section class="body-game">
@@ -52,11 +63,11 @@
             <h2>PONTUAÇÃO</h2>
             <div class="players">
                 <div class="player-1">
-                    <span>Player: 1</span>
+                    <span id="name-player1">Player X</span>
                     <span class="pointP1">0</span>
                 </div>
                 <div class="player-2">
-                    <span>Player: 2</span>
+                    <span id="name-player2">Player O</span>
                     <span class="pointP2">0</span>
                 </div>
             </div>

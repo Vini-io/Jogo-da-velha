@@ -69,10 +69,10 @@ document.querySelector(".tieStartGame").addEventListener("click", () => {
 function winGame(symbols) {
 
     if (symbols == 'x') {
-    document.querySelector(".winnerPlayer").innerHTML = "Player-1"
+        document.querySelector(".winnerPlayer").innerHTML = "Player-1"
         pointX++;
     } else {
-    document.querySelector(".winnerPlayer").innerHTML = "Player-2"
+        document.querySelector(".winnerPlayer").innerHTML = "Player-2"
         pointO++;
     }
     board = ['', '', '', '', '', '', '', '', ''];
@@ -102,7 +102,7 @@ document.querySelector(".btn-play").addEventListener("click", () => {
         document.querySelector(".body-game").style.display = "flex"
         document.querySelector(".loader").classList.add("show-loader")
         setTimeout(() => {
-        document.querySelector(".loader").classList.remove("show-loader")
+            document.querySelector(".loader").classList.remove("show-loader")
         }, 1000);
     }, 2000);
 })
@@ -132,7 +132,7 @@ document.querySelector(".back").addEventListener("click", () => {
         document.querySelector(".loader").classList.add("show-loader")
         setTimeout(() => {
             document.querySelector(".loader").classList.remove("show-loader")
-            }, 1000);
+        }, 1000);
     }, 2000);
 })
 
@@ -141,6 +141,28 @@ document.querySelector(".back").addEventListener("click", () => {
 // sair do jogo
 
 
-document.querySelector(".close").addEventListener("click", ()=>{
+document.querySelector(".close").addEventListener("click", () => {
     window.close();
+})
+
+//options player
+
+
+function modPlayer1() {
+    let getNamePlayer1 = document.querySelector("#getPlayer1").value
+    console.log(getNamePlayer1)
+    document.querySelector("#name-player1").innerHTML = getNamePlayer1;
+}
+
+function modPlayer2() {
+    let getNamePlayer2 = document.querySelector("#getPlayer2").value
+    document.querySelector("#name-player2").innerHTML = getNamePlayer2;
+}
+
+document.querySelector(".btn-op").addEventListener("click", ()=>{
+    document.querySelector(".body-options").style.display = "flex"
+})
+
+document.querySelector(".op-close").addEventListener("click", ()=>{
+    document.querySelector(".body-options").style.display = "none"
 })
