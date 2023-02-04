@@ -69,10 +69,10 @@ document.querySelector(".tieStartGame").addEventListener("click", () => {
 function winGame(symbols) {
 
     if (symbols == 'x') {
-        document.querySelector(".winnerPlayer").innerHTML = getNamePlayer1
+        document.querySelector(".winnerPlayer").innerHTML = getNamePlayer1.value
         pointX++;
     } else {
-        document.querySelector(".winnerPlayer").innerHTML = getNamePlayer2
+        document.querySelector(".winnerPlayer").innerHTML = getNamePlayer2.value
         pointO++;
     }
     board = ['', '', '', '', '', '', '', '', ''];
@@ -148,15 +148,15 @@ document.querySelector(".close").addEventListener("click", () => {
 
 //options player
 
-let getNamePlayer1 = document.querySelector("#getPlayer1").value
-let getNamePlayer2 = document.querySelector("#getPlayer2").value
+let getNamePlayer1 = document.querySelector("#getPlayer1")
+let getNamePlayer2 = document.querySelector("#getPlayer2")
 
 function modPlayer1() {
-    document.querySelector("#name-player1").innerHTML = getNamePlayer1;
+    document.querySelector("#name-player1").innerHTML = getNamePlayer1.value;
 }
 
 function modPlayer2() {
-    document.querySelector("#name-player2").innerHTML = getNamePlayer2;
+    document.querySelector("#name-player2").innerHTML = getNamePlayer2.value;
 }
 
 document.querySelector(".btn-op").addEventListener("click", () => {
